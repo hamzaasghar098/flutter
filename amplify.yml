@@ -3,6 +3,9 @@ frontend:
   phases:
     build:
       commands:
+        - cd flutter  # Replace 'flutter' with the actual path to your Flutter project
+        - export PATH="$PATH:`pwd`/flutter/bin"
+        - flutter pub get
         - flutter build web
   artifacts:
     baseDirectory: build/web
